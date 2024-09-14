@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+/* General Styling */
+:root {  
+    --font-neutral: #eef1f6;
+    --primary: #801d80;
+    --secondary: #42c1ca;
+    --tertiary: #4b0d49;
+    --bg-footer: #161727;
+    --bg-hero: #110318;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    border-radius: 0.5em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-neutral);
+}
+
+a:hover { 
+    text-shadow: 0 0 5px #0011ff; 
+}
+
+h4 {
+    font-weight: 600;
+}
+
+/* SECTION 1 - NAVBAR */
+.logos {
+    background-color: var(--secondary);
+    padding: 0.2em;
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.6);
+}
+
+.logos:hover {
+    background-color: var(--primary);
+}
+
+.bg1 {
+    background: linear-gradient(-45deg, #5e2a88, #e73c7e, #2988aa, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+    padding: 4em;
+    font-family: "Oxygen", sans-serif;
+    font-style: normal;
+    color: var(--font-neutral);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.nav {
+    margin: 0 4em;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 2em;
+}
+
+.nav-title {
+    font-size: 1.475em;
+    flex-basis: 30%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 70%;
+    gap: 2em;
+    list-style: none;
+    font-weight: 700;
+}
+
+.navbar li a {
+    color: var(--font-neutral);
+}
+
+.navbar li a:active {
+    color: var(--primary);
+}
+
+.navbar li:nth-child(4):active .logos {
+    background-color: var(--font-neutral);
+}
+
+.navbar li:nth-child(5):active .logos {
+    background-color: var(--font-neutral);
+}
+  
+
+/* SECTION 2 - HERO */
+.hero {
+    padding: 5em;
+    margin: 8em 2em 4em 2em;
+}
+
+.CV {
+    margin-bottom: 1.5em;
+    color: var(--font-neutral);
+    font-weight: 500;
+}
+
+.hero-title {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--secondary);
+}
+
+.hero-text {
+    margin: 1em 0;
+    font-size: 1.25em;
+    font-weight: 800;
+}
+
+/* section animated colored separations */
+.border {
+    padding: 2rem;
+    border-top: 7px solid;
+    animation: colorWash 3s infinite;
+}
+
+@keyframes colorWash {
+    from {border-top-color: var(--primary);}
+    42%{border-top-color: var(--secondary);}
+    to {border-top-color: var(--primary);}
+}
+
+/* Underline Animation */
+.un {
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(var(--secondary) 0 0);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s; /*change after the size immediately*/
+}
+
+.un:hover {
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
+}
+
+/* Button Style, Before Animation & Hover */
+.btn {
+    color: var(--font-neutral);
+    background-color: var(--primary);
+    padding: 1.2em;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.6);
+    font-size: 0.90em;
+    font-weight: 800;
+}
+
+.btn:hover {
+    color: var(--secondary);
+    background-color: var(--secondary);
+}
+
+.btn, .btn-glow {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    max-height: 60px;
+    max-width: 260px;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5em;
+}
+
+.btn:before, .btn-glow:before {
+    content: '';
+    width: 99999px;
+    height: 99999px;
+    top: 50%;
+    left: 50%;
+    background-image: conic-gradient(rgba(0,0,0,0), #7c97ff, rgba(0,0,0,0) 25%);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(0deg);
+    z-index: -2;
+    animation: glow 1s linear infinite;
+}
+
+.btn-glow {
+    filter: blur(10px);
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 2.5px;
+    top: 2.5px;
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+    background: var(--primary);
+    border-radius: 0.5em;
+}
+
+@keyframes glow {
+    100% {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+}
+
+/* 2nd Hero Button Classic Hover Effect */
+.btn2 {
+    color: var(--font-neutral);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 0.25em;
+    cursor: pointer;
+    padding: 0.5em;
+    margin-top: 1.5em;
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.6);
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.btn2:hover {
+    color: var(--primary);
+    background-color: var(--font-neutral);
+}
+
+
+/* SECTION 3 - PROJECTS */
+.bg4 {
+    background-image: url("./Images/carbon_fibre.webp");
+    padding: 4em 0em;
+    font-family: "Oxygen", sans-serif;
+    font-style: normal;
+    color: var(--font-neutral);
+}
+
+/* SECTION A - PROJECT 1 */
+.projects-title {
+    color: var(--secondary);
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, rgba(255,249,34), rgba(255,0,128), rgba(56,2,155,0));
+    border-image-slice: 1;
+    width: 290px;
+    padding-top: 4.5em;
+    margin: 0 2em;
+    margin-bottom: 4em;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    border-bottom: 4px solid;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    margin: 2em 4em;
+    position: relative;
+}
+
+.projects-subtitle {
+    margin-bottom: 2em;
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.projects-paragraph {
+    width: 60%;
+    background-color: var(--bg-footer);
+    border-radius: 1em;
+    padding: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.prj1-img {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    margin: 0 2em;
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.6);
+}
+
+.prj1-vid {
+    display: block;
+    margin: 0 auto;
+    margin-top: 35%;
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.6);
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+/* SECTION B - PROJECT 2 */
+.flex-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    margin: 20em 4em;
+    position: relative;
+    padding: 6em 0;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, rgba(255,249,34), rgba(255,0,128), rgba(56,2,155,0));
+    border-image-slice: 1;
+}
+
+.projects-subtitle2 {
+    margin-bottom: 2em;
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.projects-paragraph2 {
+    width: 60%;
+    background-color: var(--bg-footer);
+    border-radius: 1em;
+    padding: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: 4em auto;
+    max-width: 1800px;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border-radius: 0.20em;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: var(--font-neutral);
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    background-color: var(--bg-footer);
+    border-radius: 0.20em;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* SECTION C - PROJECT 3 */
+.flex-container3 {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 4em;
+    position: relative;
+}
+
+.projects-subtitle3 {
+    margin-bottom: 2em;
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.projects-paragraph3 {
+    width: 80%;
+    background-color: var(--bg-footer);
+    border-radius: 1em;
+    padding: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.prj3-img {
+    position: absolute;
+    top: 50px;
+    left: 65%;
+    margin: 0 2em;
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.6);
+    max-width: 600px;
+    max-height: 1200px;
+}
+
+.prj3-vid {
+    display: block;
+    margin: 0 auto;
+    margin-top: 60%;
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.6);
+    border-radius: 0.5em;
+}
+
+
+/* SECTION 4 - CONTACT */
+.bg2 {
+    background-image: url("./Images/BeamBg.png");
+    padding: 4em 0em;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--font-neutral);
+    text-align: center;
+}
+
+.contact-text {
+    width: 400px;
+    margin: 1em auto;
+}
+
+/* SECTION 5 - FOOTER */
+.bg3 {
+    background-color: var(--bg-footer);
+    padding: 2em 0em;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--font-neutral);
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 2em 0 4em 0em;
+}
+
+.logos2 {
+    background-color: var(--primary);
+    padding: 0.2em;
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.6);
+}
+
+
+/* SECTION 5 - RESPONSIVE */
+@media(max-width: 1040px){
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+        padding: 0;
+    }
+
+    .navbar {
+        gap: 1em;
+    }
+
+    .bg1 {
+        font-size: 0.95em;
+    }
+
+    .logos {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contact-text {
+        width: 200px;
+        margin: 1em auto;
+    }
+
+    .btn {
+        font-size: 0.75em;
+        padding: 0.35em;
+    }
+
+    .hero{
+        padding: 0em;
+        margin: 8em 0em 4em 0em;
+        font-size: 0.90em;
+    }
+
+    .flex-container {
+        margin: 2em 1em;
+        text-align: justify;
+    }
+
+    .prj1-img {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .prj1-vid {
+        width: 97%;
+        margin: 40% 0em 0em 0.5em;
+    }
+
+    .projects-title {
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+    
+    .projects-paragraph {
+        width: 100%;
+    }
+
+
+    .flex-container2 {
+        margin: 2em 1em;
+        margin-top: 20%;
+        text-align: justify;
+    }
+
+    .projects-title2 {
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+    
+    .projects-paragraph2 {
+        width: 100%;
+    }
+
+    .prj2-img {
+        position: relative;
+        width: 100%;
+        margin: 0em;
+        top: 50px;
+        left: 0%;
+    }
+
+    .flex-container3 {
+        margin: 2em 1em;
+        margin-top: 20%;
+        text-align: justify;
+    }
+
+    .projects-title3 {
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+    
+    .projects-paragraph3 {
+        width: 100%;
+    }
+
+    .prj3-img {
+        position: relative;
+        width: 50%;
+        margin: 0em;
+        top: 50px;
+        left: 25%;
+    }
+
+    .prj3-vid {
+        width: 50%;
+    }
+}

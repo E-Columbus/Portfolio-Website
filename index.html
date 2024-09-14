@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="./Images/Suitcase.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <section id="header">
+            <div class="bg1">
+                <nav class="nav">
+                    <img src="./Images/html5.png" width="60px" height="60px">
+                    <a><h1 class="nav-title">Welcome to my Portfolio</h1></a>
+                        <ul class="navbar">
+                            <li><a href="#projects" class="un">Projects</a></li>
+                            <li><a href="./Portfolio_about.html" class="un">About</a></li>
+                            <li><a href="#contact" class="un">Contact</a></li>
+                            <li>
+                                <a href="https://ar.linkedin.com/in/emir-christian-c-6733091b8"><img src="./Images/linkedin.svg" width="40px" height="40px" class="logos"></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/E-Columbus"><img src="./Images/github.svg" width="40px" height="40px" class="logos"></a>
+                            </li>
+                            <li>            
+                                <div class="btn-glow"></div>
+                                <a href="./Images/CV - Emir Christian Colombo Hezze.jpg" download><button class="btn">C.V | Resume</button></a>                             
+                            </li>
+                        </ul>
+                </nav>
+                <!-- HERO SECTION -->
+                <div class="hero">
+                    <a href="./Portfolio_about.html"><p class="CV un">Emir Christian Colombo Hezze,</p></a>
+                    <h2 class="hero-title">Frontend Software Developer</h2>
+                    <p class="hero-text">Frontend Masters's graduate with several years of experience building websites, I have worked with HTML & CSS and Javascript natively as well as using React.</p>
+                    <p class="hero-text">In this website you will find my UI/UX projects with their correspondent descriptions. Also works on mobile.</p>
+                    <a href="./Portfolio_about.html"><button class="btn2">More About Me</button></a>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <div class="bg4 border">
+            <h2 class="projects-title" data-aos="fade-right" data-aos-duration="2000">My Projects</h2>
+            <!-- PROJECT 1 -->
+            <div class="flex-container">
+                <h4 data-aos="fade-down-left" data-aos-duration="2000">Latest Project</h4>
+                <h3 class="projects-subtitle" data-aos="fade-down-left" data-aos-duration="2000">Netflix Landing Page</h3>
+                <p class="projects-paragraph" data-aos="fade-left" data-aos-duration="2000">Fully functional Netflix landing page clone which makes API calls to display randomly selected Netflix series from The Movie Database in its hero section and rows. It also has one-to-one Netflix hover animations, tablet and phone responsive dimensions designs and Axios instances implemented to it.</p>
+                <h4 data-aos="fade-up-left" data-aos-duration="2000">Technologies used include:</h4>
+                <h5 data-aos="fade-up-left" data-aos-duration="2000">CSS • Javascript • React • Axios</h5>
+                <img src="./Images/Navbar and Hero.png" width="50%" class="prj1-img" data-aos="fade-right" data-aos-duration="2000">
+            </div>
+            <video controls width="60%" class="prj1-vid" data-aos="fade-up" data-aos-duration="2000">       
+                <source src="./Images/Netflix Landing Page.mp4" type="video/mp4" />
+            </video>
+            <!-- PROJECT 2 -->
+            <div class="flex-container2">
+                <h4 data-aos="fade-right" data-aos-duration="2000">UI Projects</h4>
+                <h3 class="projects-subtitle2" data-aos="fade-left" data-aos-duration="2000">Classic Designs</h3>
+                <p class="projects-paragraph2" data-aos="fade-up" data-aos-duration="2000">A solid knowledge base is always needed for versatility when learning new technologies as a software developer, all of the following projects have been made using purely HTML + CSS and Javascript. Here you'll find various designs from a commerce checkout to an interactive Wordle clone or a fully functional calculator.</br></br>    
+                You can try my designs yourself here: 👉<a href="https://calculator998.vercel.app/">Calculator</a>👈👉<a href="https://wordle546.vercel.app/">Wordle</a>👈
+                </p>
+                <h4 data-aos="fade-left" data-aos-duration="2000">Technologies used include:</h4>
+                <h5 data-aos="fade-right" data-aos-duration="2000">HTML • CSS • Javascript</h5>
+                    <div class="slideshow-container" data-aos="fade-down" data-aos-duration="2000">
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="./Images/FMCheckout.png" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="./Images/FMNewspaper.png" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="./Images/FMCalculator.png" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="./Images/FMWordle.png" style="width:100%">
+                        </div>
+                        <div>
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>           
+                    </div>
+                    <video controls width="70%" class="prj1-vid" data-aos="fade-up" data-aos-duration="2000">             
+                        <source src="./Images/FMProjects.mp4" type="video/mp4" />
+                    </video>
+            </div>
+            <!-- PROJECT 3 -->
+            <div class="flex-container3">
+                <h4 data-aos="fade-down-right" data-aos-duration="2000">UX Project</h4>
+                <h3 class="projects-subtitle3" data-aos="fade-down-right" data-aos-duration="2000">Telegram E-Commerce Chatbot</h3>
+                <p class="projects-paragraph3" data-aos="fade-right" data-aos-duration="2000">Using purely an efficient Javascript switch system with an imperative design pattern as the logic behind it, this interactive Chatbot recreates the complete user experience of buying products online by making API calls. It also provides the user with an interface made entirely in Javascript in order to adapt the process to Telegram's messaging format.</p>
+                <h4 data-aos="fade-up-right" data-aos-duration="2000">Technologies used include:</h4>
+                <h5 data-aos="fade-up-right" data-aos-duration="2000">Javascript • Telegram API</h5>
+                <img src="./Images/Telegram Bot.png" width="30%" class="prj3-img" data-aos="fade-left" data-aos-duration="2000">
+            </div>
+            <video controls width="30%" class="prj3-vid" data-aos="fade-up" data-aos-duration="2000">             
+                <source src="./Images/Telegram Bot Phone.mp4" type="video/mp4" />
+            </video>
+        </div>     
+    </section>
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="bg2 border">
+            <h2>Contact</h2>
+            <p class="contact-text">I am always interested in hearing about new job opportunities, you can send me a message to the email address included in my CV or here.</p>
+            <a href="mailto:sirhovell@gmail.com"><button class="btn2">Email Me</button></a>
+        </div>
+    </section>
+    <!-- FOOTER SECTION -->
+    <footer>
+        <section>
+            <div class="bg3 border">
+                <h2>Emir Colombo • Software Developer</h2>
+                <div class="footer-container">
+                    <a href="https://ar.linkedin.com/in/emir-christian-c-6733091b8"><img src="./Images/linkedin.svg" width="40px" height="40px" class="logos2"></a>
+                    <a href="#header"><img src="./Images/house-solid.svg" width="40px" height="40px" class="logos2"></a>
+                    <a href="https://github.com/E-Columbus"><img src="./Images/github.svg" width="40px" height="40px" class="logos2"></a>
+               </div>
+                <h4>© 2024 Emir Colombo. All rights reserved.</h4>
+            </div>
+        </section>
+    </footer>
+
+    <script src="./index.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
