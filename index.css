@@ -13,6 +13,7 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 *,
@@ -756,7 +757,7 @@ h4 {
 
 
 /* SECTION 6 - RESPONSIVE */
-@media(max-width: 1040px){
+@media(max-width: 950px){
     .nav {
         flex-wrap: wrap;
         justify-content: center;
@@ -797,6 +798,7 @@ h4 {
         position: relative;
         margin: 2em 1em;
         text-align: justify;
+        text-justify: distribute;
     }
 
     .prj1-img {
@@ -823,7 +825,7 @@ h4 {
     .flex-container2 {
         margin: 2em 1em;
         margin-top: 20%;
-        text-align: justify;
+        text-justify: distribute;
     }
 
     .projects-title2 {
@@ -847,6 +849,7 @@ h4 {
         margin: 2em 1em;
         margin-top: 20%;
         text-align: justify;
+        text-justify: distribute;
     }
 
     .projects-title3 {
@@ -868,5 +871,10 @@ h4 {
 
     .prj3-vid {
         width: 50%;
+    }
+
+    footer {
+        text-align: justify;
+        text-justify: distribute;
     }
 }
